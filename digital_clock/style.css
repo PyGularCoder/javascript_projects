@@ -1,0 +1,136 @@
+body {
+  background-color: #212121;
+  color: #fff;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* #clock-container {
+  position: relative;
+  text-align: center;
+  margin: auto;
+} */
+
+
+#clock-container {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  width: 240px;
+  height: 240px;
+}
+
+#banner {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#clock {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+#hour,
+#minute,
+#second {
+  position: absolute;
+  background-color: #fff;
+  transition: transform 0.5s cubic-bezier(0.4, 2.3, 0.35, 1);
+  will-change: transform;
+
+}
+
+#hour {
+  width: 4px;
+  height: 70px;
+  top: calc(50% - 70px);
+  left: calc(50% - 2px);
+  transform-origin: 50% 100%;
+}
+
+#minute {
+  width: 2px;
+  height: 90px;
+  top: calc(50% - 90px);
+  left: calc(50% - 1px);
+  transform-origin: 50% 100%;
+}
+
+#second {
+  width: 1px;
+  height: 100px;
+  top: calc(50% - 100px);
+  left: calc(50% - 0.5px);
+  transform-origin: 50% 100%;
+  background-color: rgba(241, 43, 43, 0.973);
+}
+
+#center-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #8a8a8a;
+  border-radius: 50%;
+  top: calc(50% - 5px);
+  left: calc(50% - 5px);
+}
+
+
+.hour-numbers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hour-number {
+  position: absolute;
+  transform-origin: 50% 50%;
+  color: #fff;
+  font-size: 16px;
+}
+.custom-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(82, 230, 235);
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1; /* Set a lower value to move it behind the clock hands */
+}
+
+#hands-container {
+  position: relative;
+  z-index: 2; /* Set a higher value to position above the custom text */
+}
