@@ -1,35 +1,73 @@
 html {
-    margin: 0;
-  }
-  
-  span {
-    display: block;
-  }
-  .canvas {
-    margin: 100px auto 100px;
-    width: 80%;
-    text-align: center;
-  }
-  
-  .button {
-    width: 100px;
-    height: 100px;
-    border: solid black 2px;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  #grey {
-    background: grey;
-  }
-  
-  #white {
-    background: white;
-  }
-  #blue {
-    background: blue;
-  }
-  #yellow {
-    background: yellow;
-  }
-  
+  margin: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  transition: background-color 0.5s;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+}
+
+.canvas {
+  margin: 100px auto;
+  width: 80%;
+  text-align: center;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  border: solid black 2px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+#grey {
+  background: grey;
+}
+
+#white {
+  background: white;
+}
+
+#blue {
+  background: blue;
+}
+
+#yellow {
+  background: yellow;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #555;
+}
+
+span {
+  display: block;
+  color: #777;
+}
