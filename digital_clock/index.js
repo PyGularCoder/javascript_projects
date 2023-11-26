@@ -4,6 +4,13 @@ const minuteHand = document.getElementById('minute');
 const secondHand = document.getElementById('second');
 const centerDot = document.getElementById('center-dot');
 
+
+function convertToRoman(num) {
+  const romanNumerals = [
+    '', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'
+  ];
+  return romanNumerals[num];
+}
 function createHourNumbers() {
   const hourNumbersContainer = document.querySelector('.hour-numbers');
 
@@ -19,7 +26,7 @@ function createHourNumbers() {
     const x = radius * Math.cos(angle);
     const y = radius * Math.sin(angle);
 
-    hourNumber.innerHTML = i;
+    hourNumber.innerHTML = convertToRoman(i);
     hourNumber.style.transform = `translate(${x}px, ${y}px)`;
     hourNumbersContainer.appendChild(hourNumber);
   }
