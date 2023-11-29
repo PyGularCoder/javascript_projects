@@ -1,4 +1,56 @@
+
+
 document.addEventListener('DOMContentLoaded', function () {
+  const body = document.body;
+
+  // Apply styles using the style property
+  body.style.backgroundImage = "url('/digital_clock/bg.jpg')";
+  body.style.backgroundSize = "98%";
+  body.style.backgroundPosition = "center";
+  body.style.backgroundRepeat = "no-repeat";
+  body.style.color = "#1f1a1a";
+  body.style.margin = "0";
+  body.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
+  body.style.display = "flex";
+  body.style.flexDirection = "column";
+  body.style.alignItems = "flex-start";
+  body.style.justifyContent = "flex-start";
+  body.style.height = "100vh";
+  body.style.padding = "0px";
+
+  const nav = document.querySelector('nav');
+  
+  nav.style.margin = "0";
+  nav.style.padding = "10px";
+  nav.style.display = "flex";
+  nav.style.width = "100%";
+  nav.style.justifyContent = "space-around";
+  nav.style.backgroundColor = "#333";
+  nav.style.zIndex = "3";
+
+  const navLinks = document.querySelectorAll('nav a');
+
+  navLinks.forEach(link => {
+    link.style.color = "#fff";
+    link.style.textDecoration = "none";
+  });
+
+  const clockContainer = document.getElementById('clock-container');
+  
+  clockContainer.style.position = "relative";
+  clockContainer.style.textAlign = "center";
+  clockContainer.style.width = "240px";
+  clockContainer.style.height = "240px";
+  clockContainer.style.left = "10%";
+  clockContainer.style.top = "10%";
+
+  const banner = document.getElementById('banner');
+
+  banner.style.fontSize = "24px";
+  banner.style.marginBottom = "10px";
+
+
+  
   const clock = document.getElementById('clock');
   const hourHand = document.getElementById('hour');
   const minuteHand = document.getElementById('minute');
@@ -76,3 +128,5 @@ document.addEventListener('DOMContentLoaded', function () {
   createBrandText();
   updateClock();
 });
+
+
