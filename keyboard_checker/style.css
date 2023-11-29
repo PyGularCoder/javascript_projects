@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 5px;
+}
+
+.key {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  user-select: none;
+}
+
+.key.highlight {
+  background-color: #a0c8f0;
+}
+
+.special {
+  background-color: #d3d3d3;
+}
+
+.large {
+  grid-column: span 2;
+}
+
+.space {
+  grid-column: span 5;
+}
+
+.bottom-row {
+  grid-column: span 1;
+}
