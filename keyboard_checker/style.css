@@ -1,47 +1,127 @@
 body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
 }
 
 .keyboard {
+  width: 1000px; 
   display: grid;
-  grid-template-columns: repeat(15, 1fr);
+  margin: auto;
   gap: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
+  gap: 5px;
+  
 }
 
 .key {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  height: 40px;
+  border: 1px solid #ccc;
   cursor: pointer;
-  background-color: #f0f0f0;
   user-select: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.key.highlight {
-  background-color: #a0c8f0;
+.key:hover {
+  background-color: #e0e0e0;
 }
 
-.special {
-  background-color: #d3d3d3;
+.key:active {
+  background-color: #b3b3b3;
 }
 
-.large {
+.key.spacebar {
+  grid-column: span 7;
+}
+
+.key.enter {
   grid-column: span 2;
 }
 
-.space {
-  grid-column: span 5;
+.key.backspace,
+.key.tab,
+.key.caps-lock,
+.key.left-shift,
+.key.right-shift,
+.key.control-left,
+.key.meta-left,
+.key.alt-left,
+.key.alt-right,
+.key.control-right {
+  grid-column: span 2;
 }
 
-.bottom-row {
-  grid-column: span 1;
+.key.escape,
+.key.backspace,
+.key.tab,
+.key.enter,
+.key.caps-lock,
+.key.shift,
+.key.control,
+.key.meta,
+.key.alt,
+.key.spacebar,
+.key.arrow {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.key.letter {
+  background-color: #fff;
+}
+
+.key.number-symbol {
+  background-color: #f2f2f2;
+}
+
+.key.shift,
+.key.control,
+.key.meta,
+.key.alt {
+  background-color: #a6a6a6;
+}
+
+.key.letter,
+.key.number-symbol,
+.key.escape,
+.key.backspace,
+.key.tab,
+.key.enter,
+.key.spacebar,
+.key.arrow {
+  color: #333;
+}
+
+.key.shift,
+.key.control,
+.key.meta,
+.key.alt {
+  color: #fff;
+}
+
+.key.spacebar {
+  font-size: 14px;
+}
+
+.key.pressed {
+  background-color: #b3b3b3 !important;
+  color: #fff !important;
 }
